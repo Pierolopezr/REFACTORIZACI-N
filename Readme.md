@@ -25,7 +25,8 @@ Podemos seleccionar diferentes elementos para mostrar su menú de refactorizaci�
 * **Convert Local Variable to Field**: Convierte una variable local en un atributo privado de la clase. Después de aplicar el patrón de refactorización, todos los usos de la variable local se sustituyen por el atributo.
 
 * **Extract Method**: Convierte un bloque de código en un método, a partir de un bloque cerrado por llaves { }. Eclipse ajusta las parámetros y el retorno del método. Es muy útil cuando detectamos `bad smells` en métodos muy largos, o en bloques de código que se repiten.
- -Cambié 'pointsPlayer1 == pointsPlayer2' por un extract method  'isTie(pointsPlayer1, pointsPlayer2'
+ -Cambié 'pointsPlayer1 == pointsPlayer2' por un extract method  'isTie(pointsPlayer1, pointsPlayer2'.
+ -score = getAdvangeOrWinScores(pointsPlayer1, pointsPlayer2);
 * **Change Method Signature**: Permite cambiar el nombre del método y los parámetros que recibe. Se actualizarán todas las dependencias y llamadas al método dentro del proyecto actual.
 
 * **Inline**: Nos permite ajustar una referencia a una variable o método en una sola linea de código.
