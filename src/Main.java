@@ -5,8 +5,8 @@ public class Main {
     public static String getScore(int pointsPlayer1, int pointsPlayer2) {
         String score = "";
 
-        if (isTie(pointsPlayer1, pointsPlayer2)) {
-            return isTie(pointsPlayer1, score);
+        if (GetTieScores(pointsPlayer1, pointsPlayer2)) {
+            return GetTieScores(pointsPlayer1);
         }
         else if (isAdvantageOrWin(pointsPlayer1, pointsPlayer2))
         {
@@ -25,7 +25,7 @@ public class Main {
         int tempScore;
         for (int i = 1; i<3; i++)
         {
-            if (isTie(i, 1)) tempScore = pointsPlayer1;
+            if (GetTieScores(i, 1)) tempScore = pointsPlayer1;
             else { score +="-"; tempScore = pointsPlayer2;}
             switch(tempScore)
             {
@@ -49,8 +49,8 @@ public class Main {
     private static String getAdvangeOrWinScores(int pointsPlayer1, int pointsPlayer2) {
         String score;
         int minusResult = pointsPlayer1 - pointsPlayer2;
-        if (isTie(minusResult, 1)) score ="Advantage player1";
-        else if (isTie(minusResult, -1)) score ="Advantage player2";
+        if (GetTieScores(minusResult, 1)) score ="Advantage player1";
+        else if (GetTieScores(minusResult, -1)) score ="Advantage player2";
         else if (minusResult>=2) score = "Win for player1";
         else score ="Win for player2";
         return score;
@@ -60,31 +60,30 @@ public class Main {
         return pointsPlayer1 >= 4 || pointsPlayer2 >= 4;
     }
 
-    private static String isTie(int pointsPlayer1, String score) {
-    score = "";
+    private static String GetTieScores(int pointsPlayer1) {
+
         switch (pointsPlayer1)
         {
             case 0:
-                score = "Love-All";
-                break;
+                return "Love-All";
+
             case 1:
-                score = "Fifteen-All";
-                break;
+                return "Fifteen-All";
+
             case 2:
-                score = "Thirty-All";
-                break;
+                return  "Thirty-All";
+
             case 3:
-                score = "Forty-All";
-                break;
+                return "Forty-All";
+
             default:
-                score = "Deuce";
-                break;
+                return "Deuce";
+
 
         }
-        return score;
     }
 
-    private static boolean isTie(int pointsPlayer1, int pointsPlayer2) {
+    private static boolean GetTieScores(int pointsPlayer1, int pointsPlayer2) {
         return pointsPlayer1 == pointsPlayer2;
     }
 }
