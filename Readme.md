@@ -7,6 +7,7 @@
 -Cambiamos 'm_score1, m_score2' por 'pointsPlayer1. pointsPlayer2'
 * **Remove variable**:
 -Remove variable score form getTieScores
+-Remove variable pointPlayer1 a pointsPlayers en GetTieScores
 * **Move**: 
 * **Extract Constant**: 
 * **Extract Local Variable**:
