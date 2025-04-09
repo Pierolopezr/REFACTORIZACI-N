@@ -5,9 +5,9 @@
 
 * **Rename** 
 -Cambiamos 'm_score1, m_score2' por 'pointsPlayer1. pointsPlayer2'
+-Rename variable pointPlayer1 a pointsPlayers en GetTieScores
 * **Remove variable**:
 -Remove variable score form getTieScores
--Remove variable pointPlayer1 a pointsPlayers en GetTieScores
 -Remove  switch en GetTieScores por una tabla string y un if-else 
 -Remover la variable score de los paramétros y lo metí dentro de la función getRegularScores 
 -Remove switch de la función getRegularScores creando una tabla string
@@ -18,7 +18,7 @@
 
 * **Convert Local Variable to Field**: 
 * **Extract Method**:
- -Cambié 'pointsPlayer1 == pointsPlayer2' por un extract method  'isTie(pointsPlayer1, pointsPlayer2'.
+ -Cambié 'pointsPlayer1 == pointsPlayer2' por un extract method  'isTie(pointsPlayer1, pointsPlayer2)'.
  -getAdvangeOrWin
  -score = getAdvangeOrWinScores(pointsPlayer1, pointsPlayer2);
  -score = getRegularScores(pointsPlayer1, pointsPlayer2, score);
@@ -28,13 +28,7 @@
 * **Change Method Signature**:
 
 * **Inline**:
-  ```
-  File fichero = new File("datos.dat");
-  PrintWriter escritor;
-  escritor = new PrintWriter(fichero);
-
-  PrintWriter escritor = new PrintWriter(new File("datos.dat"));
-  ```
+-Refactor: Inline method a la función isAdvantageOrWin para que vuelva a la función getScore
   
 * **Extract Interface**: 
 * **Extract Superclass**: 
