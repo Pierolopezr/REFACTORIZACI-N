@@ -10,7 +10,13 @@ public class Main {
         }
         else if (pointsPlayer1 >= 4 || pointsPlayer2 >= 4)
         {
-            return getAdvangeOrWinScores(pointsPlayer1, pointsPlayer2);
+            String score;
+            int minusResult = pointsPlayer1 - pointsPlayer2;
+            if (GetTieScores(minusResult, 1)) score ="Advantage player1";
+            else if (GetTieScores(minusResult, -1)) score ="Advantage player2";
+            else if (minusResult>=2) score = "Win for player1";
+            else score ="Win for player2";
+            return score;
         }
         else
         {
@@ -24,16 +30,6 @@ public class Main {
 
         String[] regularScores = {"Love", "Fifteen", "Thirty", "Forty"};
         return regularScores[pointsPlayer1] + "-" + regularScores[pointsPlayer2];
-    }
-
-    private static String getAdvangeOrWinScores(int pointsPlayer1, int pointsPlayer2) {
-        String score;
-        int minusResult = pointsPlayer1 - pointsPlayer2;
-        if (GetTieScores(minusResult, 1)) score ="Advantage player1";
-        else if (GetTieScores(minusResult, -1)) score ="Advantage player2";
-        else if (minusResult>=2) score = "Win for player1";
-        else score ="Win for player2";
-        return score;
     }
 
     private static String GetTieScores(int pointsPlayer) {

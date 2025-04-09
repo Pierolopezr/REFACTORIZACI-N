@@ -28,7 +28,8 @@
 * **Change Method Signature**:
 
 * **Inline**:
--Refactor: Inline method a la función isAdvantageOrWin para que vuelva a la función getScore
+-Refactor: Inline method a la función isAdvantageOrWin para que vuelva a la función getScore.
+-Refactor: Inline method a la función getAdvantageOrWinScores para que vuelva a la función getScore.
   
 * **Extract Interface**: 
 * **Extract Superclass**: 
