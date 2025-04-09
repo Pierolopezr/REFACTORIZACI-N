@@ -8,6 +8,7 @@
 * **Remove variable**:
 -Remove variable score form getTieScores
 -Remove variable pointPlayer1 a pointsPlayers en GetTieScores
+-Remove  switch en GetTieScores por una tabla string y un if-else
 * **Move**: 
 * **Extract Constant**: 
 * **Extract Local Variable**:

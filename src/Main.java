@@ -61,25 +61,11 @@ public class Main {
     }
 
     private static String GetTieScores(int pointsPlayer) {
-
-        switch (pointsPlayer)
-        {
-            case 0:
-                return "Love-All";
-
-            case 1:
-                return "Fifteen-All";
-
-            case 2:
-                return  "Thirty-All";
-
-            case 3:
-                return "Forty-All";
-
-            default:
-                return "Deuce";
-
-
+        String[] tieScores = {"Love-All", "Fifteen-All", "Thirty-All", "Forty-All"};
+        if (pointsPlayer >= 0 && pointsPlayer <= 3) {
+            return tieScores[pointsPlayer];
+        } else {
+            return "Deuce";
         }
     }
 
