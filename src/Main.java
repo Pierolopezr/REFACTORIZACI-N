@@ -4,10 +4,9 @@ public class Main {
      */
     public static String getScore(int pointsPlayer1, int pointsPlayer2) {
         String score = "";
-        int tempScore=0;
 
         if (isTie(pointsPlayer1, pointsPlayer2)) {
-            return isTie(pointsPlayer1);
+            return isTie(pointsPlayer1, score);
         }
         else if (isAdvantageOrWin(pointsPlayer1, pointsPlayer2))
         {
@@ -22,6 +21,7 @@ public class Main {
     }
 
     private static String getRegularScores(int pointsPlayer1, int pointsPlayer2, String score) {
+        score = "";
         int tempScore;
         for (int i = 1; i<3; i++)
         {
@@ -60,8 +60,8 @@ public class Main {
         return pointsPlayer1 >= 4 || pointsPlayer2 >= 4;
     }
 
-    private static String isTie(int pointsPlayer1) {
-        String score;
+    private static String isTie(int pointsPlayer1, String score) {
+    score = "";
         switch (pointsPlayer1)
         {
             case 0:

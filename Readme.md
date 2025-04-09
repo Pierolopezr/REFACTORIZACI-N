@@ -29,7 +29,9 @@ Podemos seleccionar diferentes elementos para mostrar su menú de refactorizaci�
  -getAdvangeOrWin
  -score = getAdvangeOrWinScores(pointsPlayer1, pointsPlayer2);
  -score = getRegularScores(pointsPlayer1, pointsPlayer2, score);
-* 
+*  **Refactor delete**
+ -Remove variable tempScore
+
 * **Change Method Signature**: Permite cambiar el nombre del método y los parámetros que recibe. Se actualizarán todas las dependencias y llamadas al método dentro del proyecto actual.
 
 * **Inline**: Nos permite ajustar una referencia a una variable o método en una sola linea de código.
