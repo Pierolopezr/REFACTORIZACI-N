@@ -15,7 +15,7 @@ Los **métodos de refactorización**, también llamados **patrones de refactoriz
 Podemos seleccionar diferentes elementos para mostrar su menú de refactorización (una clase, una variable, método, bloque de instrucciones, expresion, etc ). A continuación se muestras algunos de los métodos más comunes:
 
 * **Rename**: Es la opción empleada para cambiar el identificador a cualquier elemento (nombre de variable, clase, método, paquete, directorio, etc). Cuando lo aplicamos, se cambian todas las veces que aparece dicho identificador.
-Cambiamos 'm_score1, m_score2' por 'pointsPlayer1. pointsPlayer2'
+-Cambiamos 'm_score1, m_score2' por 'pointsPlayer1. pointsPlayer2'
 * **Move**: Mueve una clase (fichero .java)de un paquete a otro y se cambian todas las referencias. También se realiza la misma operación arrastrando la clase de un paquete a otro en el explorador de eclipse.
 
 * **Extract Constant**: Convierte un número o cadena literal en una constante. Se puede ver donde se realizarán los cambios, y también el estado antes y después de refactorizar. Después, todas las apariciones de esa cadena se sustituyen por el nombre de la constante. Esto se utiliza modificar el valor en un solo lugar.
@@ -25,7 +25,7 @@ Cambiamos 'm_score1, m_score2' por 'pointsPlayer1. pointsPlayer2'
 * **Convert Local Variable to Field**: Convierte una variable local en un atributo privado de la clase. Después de aplicar el patrón de refactorización, todos los usos de la variable local se sustituyen por el atributo.
 
 * **Extract Method**: Convierte un bloque de código en un método, a partir de un bloque cerrado por llaves { }. Eclipse ajusta las parámetros y el retorno del método. Es muy útil cuando detectamos `bad smells` en métodos muy largos, o en bloques de código que se repiten.
-
+ -Cambié 'pointsPlayer1 == pointsPlayer2' por un extract method  'isTie(pointsPlayer1, pointsPlayer2'
 * **Change Method Signature**: Permite cambiar el nombre del método y los parámetros que recibe. Se actualizarán todas las dependencias y llamadas al método dentro del proyecto actual.
 
 * **Inline**: Nos permite ajustar una referencia a una variable o método en una sola linea de código.

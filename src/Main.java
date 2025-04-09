@@ -6,7 +6,7 @@ public class Main {
         String score = "";
         int tempScore=0;
 
-        if (pointsPlayer1 == pointsPlayer2) {
+        if (isTie(pointsPlayer1, pointsPlayer2)) {
             switch (pointsPlayer1)
             {
                 case 0:
@@ -30,8 +30,8 @@ public class Main {
         else if (pointsPlayer1 >=4 || pointsPlayer2 >=4)
         {
             int minusResult = pointsPlayer1-pointsPlayer2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
+            if (isTie(minusResult, 1)) score ="Advantage player1";
+            else if (isTie(minusResult, -1)) score ="Advantage player2";
             else if (minusResult>=2) score = "Win for player1";
             else score ="Win for player2";
         }
@@ -39,7 +39,7 @@ public class Main {
         {
             for (int i=1; i<3; i++)
             {
-                if (i==1) tempScore = pointsPlayer1;
+                if (isTie(i, 1)) tempScore = pointsPlayer1;
                 else { score+="-"; tempScore = pointsPlayer2;}
                 switch(tempScore)
                 {
@@ -60,5 +60,9 @@ public class Main {
 
         }
     return score;
+    }
+
+    private static boolean isTie(int pointsPlayer1, int pointsPlayer2) {
+        return pointsPlayer1 == pointsPlayer2;
     }
 }
