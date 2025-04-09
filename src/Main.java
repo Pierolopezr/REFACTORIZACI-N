@@ -8,16 +8,23 @@ public class Main {
         if (GetTieScores(pointsPlayer1, pointsPlayer2)) {
             return GetTieScores(pointsPlayer1);
         }
-        else if (pointsPlayer1 >= 4 || pointsPlayer2 >= 4)
+        else if ((pointsPlayer1 >= 4 || pointsPlayer2 >= 4)&& (pointsPlayer1 - pointsPlayer2 == 1|| pointsPlayer1 - pointsPlayer2 ==-1))
         {
-            String score;
+            String score = "";
             int minusResult = pointsPlayer1 - pointsPlayer2;
             if (GetTieScores(minusResult, 1)) score ="Advantage player1";
             else if (GetTieScores(minusResult, -1)) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
             return score;
         }
+    
+        else if (pointsPlayer1 >= 4 || pointsPlayer2 >= 4)
+    {
+        String score;
+        int minusResult = pointsPlayer1 - pointsPlayer2;
+        if (minusResult>=2) score = "Win for player1";
+        else score ="Win for player2";
+        return score;
+    }
         else
         {
             return getRegularScores(pointsPlayer1, pointsPlayer2);

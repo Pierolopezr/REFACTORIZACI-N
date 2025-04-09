@@ -12,26 +12,17 @@
 -Remover la variable score de los paramétros y lo metí dentro de la función getRegularScores 
 -Remove switch de la función getRegularScores creando una tabla string
 -Remove blucle for, string vacío, int tempScore por una tabla String y un return de la función getRegularScores.
-* **Move**: 
-* **Extract Constant**: 
-* **Extract Local Variable**:
 
-* **Convert Local Variable to Field**: 
 * **Extract Method**:
  -Cambié 'pointsPlayer1 == pointsPlayer2' por un extract method  'isTie(pointsPlayer1, pointsPlayer2)'.
  -getAdvangeOrWin
  -score = getAdvangeOrWinScores(pointsPlayer1, pointsPlayer2);
  -score = getRegularScores(pointsPlayer1, pointsPlayer2, score);
+* Refactor: extract isAdvantage method
 *  **Refactor delete**
  -Remove variable tempScore
-
-* **Change Method Signature**:
-
 * **Inline**:
 -Refactor: Inline method a la función isAdvantageOrWin para que vuelva a la función getScore.
 -Refactor: Inline method a la función getAdvantageOrWinScores para que vuelva a la función getScore.
-  
-* **Extract Interface**: 
-* **Extract Superclass**: 
 
 
