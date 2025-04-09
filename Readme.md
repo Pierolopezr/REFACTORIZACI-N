@@ -8,8 +8,9 @@
 * **Remove variable**:
 -Remove variable score form getTieScores
 -Remove variable pointPlayer1 a pointsPlayers en GetTieScores
--Remove  switch en GetTieScores por una tabla string y un if-else
-* Remover la variable score de los paramétros y lo metí dentro de la función getRegularScores
+-Remove  switch en GetTieScores por una tabla string y un if-else 
+-Remover la variable score de los paramétros y lo metí dentro de la función getRegularScores 
+-Refactor: remove switch de la función getRegularScores creando una tabla string
 * **Move**: 
 * **Extract Constant**: 
 * **Extract Local Variable**:

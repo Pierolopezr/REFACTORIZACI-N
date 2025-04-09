@@ -23,25 +23,12 @@ public class Main {
     private static String getRegularScores(int pointsPlayer1, int pointsPlayer2) {
         String score = "";
         int tempScore;
+        String[] regularScores = {"Love", "Fifteen", "Thirty", "Forty"};
         for (int i = 1; i<3; i++)
         {
             if (GetTieScores(i, 1)) tempScore = pointsPlayer1;
             else { score +="-"; tempScore = pointsPlayer2;}
-            switch(tempScore)
-            {
-                case 0:
-                    score +="Love";
-                    break;
-                case 1:
-                    score +="Fifteen";
-                    break;
-                case 2:
-                    score +="Thirty";
-                    break;
-                case 3:
-                    score +="Forty";
-                    break;
-            }
+            score += regularScores[tempScore];
         }
         return score;
     }
