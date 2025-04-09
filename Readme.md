@@ -10,7 +10,8 @@
 -Remove variable pointPlayer1 a pointsPlayers en GetTieScores
 -Remove  switch en GetTieScores por una tabla string y un if-else 
 -Remover la variable score de los paramétros y lo metí dentro de la función getRegularScores 
--Refactor: remove switch de la función getRegularScores creando una tabla string
+-Remove switch de la función getRegularScores creando una tabla string
+-Remove blucle for, string vacío, int tempScore por una tabla String y un return de la función getRegularScores.
 * **Move**: 
 * **Extract Constant**: 
 * **Extract Local Variable**:

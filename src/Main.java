@@ -21,16 +21,9 @@ public class Main {
     }
 
     private static String getRegularScores(int pointsPlayer1, int pointsPlayer2) {
-        String score = "";
-        int tempScore;
+
         String[] regularScores = {"Love", "Fifteen", "Thirty", "Forty"};
-        for (int i = 1; i<3; i++)
-        {
-            if (GetTieScores(i, 1)) tempScore = pointsPlayer1;
-            else { score +="-"; tempScore = pointsPlayer2;}
-            score += regularScores[tempScore];
-        }
-        return score;
+        return regularScores[pointsPlayer1] + "-" + regularScores[pointsPlayer2];
     }
 
     private static String getAdvangeOrWinScores(int pointsPlayer1, int pointsPlayer2) {
